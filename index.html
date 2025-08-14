@@ -7,13 +7,79 @@
 
     <!-- CSS External -->
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
     <!-- Main Header -->
-    <header></header>
+    <header
+      class="flex item-center justify-between pt-[16px] pb-[16px] pl-[10px] pr-[10px]"
+    >
+      <!-- Logo Icon -->
+      <div class="bg-blue-300 rounded-full h-[60px] w-[60px]"></div>
+
+      <nav>
+        <ul class="flex space-x-4">
+          <li>
+            <a
+              href="#"
+              class="text-gray-700 border p-[4px] p-[6px] rounded-[8px] hover:text-blue-300"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-700 border p-[4px] p-[6px] rounded-[8px] hover:text-blue-300"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-700 border p-[4px] p-[6px] rounded-[8px] hover:text-blue-300"
+              >Portfolio</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-700 border p-[4px] p-[6px] rounded-[8px] hover:text-blue-300"
+              >Message Us</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <hr />
 
     <!-- Main Content -->
-    <main></main>
+    <main>
+      <!-- Home -->
+      <section class="h-[400px] bg-gray-200">
+        <div class="flex item-center justify-center h-full">
+          <h1 class="text-4xl font-bold text-gray-700">
+            Hi <span id="user-greeting">User</span>! <br />Welcome to
+            Kelanaloka!
+          </h1>
+        </div>
+      </section>
+
+      <!-- About Us -->
+      <section class="h-[400px]">
+        <div class="flex item-center justify-center h-full">
+          <h1 class="text-3xl font-bold text-gray-700">About Us</h1>
+        </div>
+      </section>
+
+      <!-- Portfolio -->
+      <section></section>
+
+      <!-- Message Us -->
+      <section></section>
+    </main>
 
     <!-- Footer -->
     <footer></footer>
