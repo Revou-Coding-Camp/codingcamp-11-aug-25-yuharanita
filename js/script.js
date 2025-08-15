@@ -1,4 +1,4 @@
-welcomeSpeech();
+// welcomeSpeech();
 
 function welcomeSpeech() {
   let userName = prompt("What is your name?");
@@ -10,17 +10,28 @@ function welcomeSpeech() {
   }
 }
 
+// Form Validation
 function sendMessage() {
-  let userName = document.getElementById("user-name").value;
   let userEmail = document.getElementById("user-email").value;
-  let userContact = document.getElementById("user-contact").value;
   let userMessage = document.getElementById("user-message").value;
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  if (userName && userEmail && userMessage) {
-    alert(
-      `Thank you for your message, ${userName}! We will get back to you at ${userEmail}.`
-    );
+  // Validate email format
+  if (!emailPattern.test(userEmail)) {
+    document.getElementById("email-error").classList.remove("hidden");
   } else {
-    alert("Please fill in all required fields.");
+    document.getElementById("email-error").classList.add("hidden");
+    // Validate message content
+    if (userEmail && userMessage) {
+      document.getElementById("message-error").classList.add("hidden");
+      document.getElementById("message-success").classList.remove("hidden");
+      document.getElementById("message-recap").classList.remove("hidden");
+      document.getElementById("recap-email").textContent = userEmail;
+      document.getElementById("recap-message").textContent = userMessage;
+    } else {
+      document.getElementById("message-error").classList.remove("hidden");
+      document.getElementById("message-success").classList.add("hidden");
+      document.getElementById("message-recap").classList.add("hidden");
+    }
   }
 }
